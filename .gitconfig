@@ -1,0 +1,23 @@
+[user]
+    email = toki.kanno@gmail.com
+    name = toki.kanno
+[color]
+    ui = auto
+[diff]
+    tool = vimdiff
+[difftool]
+    prompt = false
+[alias]
+    d = difftool
+    co = checkout
+    cm = commit
+    st = status
+    b = branch
+    pu = "!f() { git pull --no-edit $@; }; f"
+    ps = push
+[core]
+    mergeoptions = --no-edit
+[push]
+    default = simple
+[commit]
+    template = ~/.gitmessage
