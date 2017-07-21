@@ -16,8 +16,9 @@
     pu = "!f() { git pull --no-edit $@; }; f"
     ps = push
 [core]
+    editor = vim
     mergeoptions = --no-edit
 [push]
     default = simple
 [commit]
-    template = ~/.gitmessage
+    # template = ~/.gitmessage
