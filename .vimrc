@@ -11,6 +11,10 @@ call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 
 Plug 'mhinz/vim-grepper'
+Plug 'easymotion/vim-easymotion'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'Raimondi/delimitMate'
+Plug 'tpope/vim-commentary'
 
 " Initialize plugin system
 call plug#end()
