@@ -14,9 +14,15 @@ Plug 'easymotion/vim-easymotion'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-commentary'
+Plug 'w0rp/ale'
 
 " Initialize plugin system
 call plug#end()
+
+" use flake8 as python linter
+let g:ale_linters = {
+\   'python': ['flake8'],
+\}
 
 set t_Co=256
 if &term =~ '256color'
