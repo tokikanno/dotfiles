@@ -1,0 +1,18 @@
+- hosts: 'pinkoi-dev'
+  tasks:
+    - lineinfile:
+        path: "{{ansible_env.HOME}}/.bashrc"
+        line: "export PYTHONPATH={{ansible_env.HOME}}/dev"
+
+    - lineinfile:
+        path: "{{ansible_env.HOME}}/.bashrc"
+        line: "export DJANGO_SETTINGS_MODULE=pinkoi.settings"
+
+    - lineinfile:
+        path: "{{ansible_env.HOME}}/.zshrc"
+        line: "export PYTHONPATH={{ansible_env.HOME}}/dev"
+
+    - lineinfile:
+        path: "{{ansible_env.HOME}}/.zshrc"
+        line: "export DJANGO_SETTINGS_MODULE=pinkoi.settings"
+
