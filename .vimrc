@@ -16,6 +16,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-commentary'
 Plug 'w0rp/ale'
 Plug 'mkitt/tabline.vim'
+Plug 'posva/vim-vue'
 
 " Initialize plugin system
 call plug#end()
