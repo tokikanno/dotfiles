@@ -1,0 +1,16 @@
+- hosts: 'pinkoi-dev'
+  tasks:
+    - name: toki's Air
+      lineinfile:
+        path: "{{ansible_env.HOME}}/.ssh/authorized_keys"
+        line: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCwhmNYQZdki8C5yZVNHI6YsuKfctwMsjfOBnpHUJZbGOylvsOXETrUKhqJJcb7BucgQst7KKMRAVMctRvLJ9tjALQ4YYe+iRc7YMbEBTkvagdlaDAqF9zC1QiPH88NnYixNUrHxJLDUPeHEy5VX/kEgs+2/10n138jUjdXdB1LoELMed1Oz/+JNL851hlJREERsf8BohF339pkhjAgTAiz/p+9mfVstaK+nWJfo+PoVNRqb5teUe2soI6oJWHFgMwnBeUrOlU0s2QO9zkoNm1oM8Iqo/xUMX+76wirMW5yqq8yFxIqwhsb7NTiM4uMhcnoFfOOuffpvIAm1/DNs3FT toki@tokis-Air "
+
+    - name: win7
+      lineinfile:
+        path: "{{ansible_env.HOME}}/.ssh/authorized_keys"
+        line: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQClpql+dJztzsotzpFbz2v+EH6XgfL0XNPp4gxPO02ycu+p2twMpakl2S8JIqEzRlSPEswxqkG7Z4jYIJZH0xxx7oOdTUjdg3VS0QmgmsHfqmPZUypcOYd8jWcT07iklr1ZFhljSjy1fqznJC+DUUrHVGcHu6bBHpZwoJOlL4RS/EbXfq3qieRMpDLRJLxR9cqRoqVBJXu9goQZtHUh0phg7tSNQ4cRExAASB3/9dgg5K57P801qbNldRXNEdhgHEc4nrOrgn8Ke9+FDleeqJisEWLrgeTAS9iubfvcC2MMZ84wgPp8oJcJJHEgly/uBhaBIv8t7D4n5jufyCnQva/n toki@Crosair-W7"
+
+    - name: theper210
+      lineinfile:
+        path: "{{ansible_env.HOME}}/.ssh/authorized_keys"
+        line: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0O6cdMXFyDFjmWNZWkJ5anRjqeVXJM9VzWYfCGJmxjc+K858anD2AY25Pl4+UA5WsdftdvR1pzJhUi2VjYGx+I4+RhFZs9tArF7u+16GyM7vUwVHgEflOFFz54sK9AUS5zPNhcigU2deV3Z77xvYvAQiIKPXle03j1he1dNQfWsp6QxHnFc42IStTekR/05t+XkjqkLJlBo+zKyHBErNKCQqbXtE5A9KVTteKuTlG+GMZQy3gtEfrU/1oti8mHxakdvoCIGyqAqrgh3gZFPHEkNvvm6vIVIzHKrqDg8KpD17MwVwgR1eNW/GpuBoeSpgHkHGDxTwFtT9yFXaBIYbD toki@theper210"
