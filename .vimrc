@@ -16,9 +16,13 @@ Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-commentary'
 Plug 'w0rp/ale'
 Plug 'mkitt/tabline.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " Initialize plugin system
 call plug#end()
+
+" use ag for honor .gitignor on fzf
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 " use flake8 as python linter
 let g:ale_linters = {
