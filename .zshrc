@@ -80,8 +80,8 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gr="grep -r"
-alias vim="/usr/local/bin/vim8 -p"
-alias vi="/usr/local/bin/vim8 -p"
+alias vim="/usr/local/bin/vim -p"
+alias vi="/usr/local/bin/vim -p"
 
 export PYTHONPATH=/home/toki/dev
 export DJANGO_SETTINGS_MODULE=pinkoi.settings
@@ -92,6 +92,7 @@ autoload -U compinit && compinit
 
 # turn off fucking Ctrl+S as stop flow control
 stty stop undef
+stty -ixon
 
 [ -s "/home/toki/.scm_breeze/scm_breeze.sh" ] && source "/home/toki/.scm_breeze/scm_breeze.sh"
 
