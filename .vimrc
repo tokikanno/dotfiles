@@ -27,7 +27,7 @@ let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 " use flake8 as python linter
 let g:ale_linters = {
-\   'python': ['flake8'],
+\   'python': ['flake8 --ignore=E501'],
 \}
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
@@ -70,6 +70,8 @@ set smartcase
 set smartindent
 set cursorline
 set cursorcolumn
+set splitright
+set splitbelow
 " highlight CursorLine ctermbg=54 ctermfg=None
 " highlight CursorColumn ctermbg=58 ctermfg=None
 
