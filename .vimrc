@@ -18,6 +18,12 @@ Plug 'w0rp/ale'
 Plug 'mkitt/tabline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'posva/vim-vue'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-easytags'
+Plug 'majutsushi/tagbar'
+Plug 'universal-ctags/ctags'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Initialize plugin system
 call plug#end()
@@ -107,3 +113,9 @@ endfunction
 
 inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 " end of auto paste mode
+
+"airline theme
+let g:airline_theme='violet'
+
+"tagbar hotkey
+nmap <F12> :TagbarToggle<CR>
