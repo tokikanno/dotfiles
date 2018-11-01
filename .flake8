@@ -1,0 +1,3 @@
+[flake8]
+select = E9,F821,F822,F823
+show_source = True
