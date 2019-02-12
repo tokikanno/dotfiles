@@ -1,6 +1,6 @@
 if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 " Specify a directory for plugins
@@ -18,12 +18,13 @@ Plug 'w0rp/ale'
 Plug 'mkitt/tabline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'posva/vim-vue'
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-easytags'
+" Plug 'xolox/vim-misc'
+" Plug 'xolox/vim-easytags'
 Plug 'majutsushi/tagbar'
 Plug 'universal-ctags/ctags'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'Chiel92/vim-autoformat'
 
 " Initialize plugin system
 call plug#end()
@@ -33,8 +34,10 @@ let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 " use flake8 as python linter
 let g:ale_linters = {
-\   'python': ['flake8 --ignore=E501'],
+\   'python': ['flake8'],
 \}
+let g:ale_lint_delay = 1000
+
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
@@ -92,23 +95,23 @@ inoremap <silent> <C-S>         <C-O>:update<CR>
 
 " start of auto paste mode
 function! WrapForTmux(s)
-  if !exists('$TMUX')
-    return a:s
-  endif
+    if !exists('$TMUX')
+        return a:s
+    endif
 
-  let tmux_start = "\<Esc>Ptmux;"
-  let tmux_end = "\<Esc>\\"
+    let tmux_start = "\<Esc>Ptmux;"
+    let tmux_end = "\<Esc>\\"
 
-  return tmux_start . substitute(a:s, "\<Esc>", "\<Esc>\<Esc>", 'g') . tmux_end
+    return tmux_start . substitute(a:s, "\<Esc>", "\<Esc>\<Esc>", 'g') . tmux_end
 endfunction
 
 let &t_SI .= WrapForTmux("\<Esc>[?2004h")
 let &t_EI .= WrapForTmux("\<Esc>[?2004l")
 
 function! XTermPasteBegin()
-  set pastetoggle=<Esc>[201~
-  set paste
-  return ""
+    set pastetoggle=<Esc>[201~
+    set paste
+    return ""
 endfunction
 
 inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
@@ -119,3 +122,12 @@ let g:airline_theme='violet'
 
 "tagbar hotkey
 nmap <F12> :TagbarToggle<CR>
+
+" easytags async mode
+let g:easytags_async=1
+
+" autoformat
+noremap <F3> :Autoformat<CR>
+let g:formatters_python = ['yapf', 'autopep8', 'black']
+
+set redrawtime=10000
