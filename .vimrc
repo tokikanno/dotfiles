@@ -131,3 +131,5 @@ noremap <F3> :Autoformat<CR>
 let g:formatters_python = ['yapf', 'autopep8', 'black']
 
 set redrawtime=10000
+
+autocmd BufNewFile *.py 0r ~/.vim/templates/python.py
