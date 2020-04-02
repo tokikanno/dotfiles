@@ -110,4 +110,6 @@ alias jsl="eslint --no-eslintrc --env browser,es6,amd,phantomjs,jquery --global 
 
 alias jslf='jsl --fix'
 
+if [[ -z "${TMUX}" ]]; then
 tmux -2 at || tmux
+fi
